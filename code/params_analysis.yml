@@ -34,7 +34,7 @@ dates:
         'RS': ['20240122_B1','20241216_B1']
         'OG': ['20241031_B1']
     'A':
-        'RS': ['20190815','20190816']
+        'RS': ['20190814','20190815','20190816']  # '20190814',
         'OG': ['20180903']
 
 times_all_arr: ### in ms
@@ -43,8 +43,8 @@ times_all_arr: ### in ms
              '20170725': [0,1362931]
              '20170809': [0,1320925]
              '20170810': [0,1297548]
-        #'OG':
-        #    '20180806': TODO
+        'OG':
+             '20180806': [0,2248483]
     'N':
         'RS':
             '20240719_B1': [1705079814223,1705080971900]
@@ -59,16 +59,19 @@ times_all_arr: ### in ms
             '20241031_B1': [1714075965237,1714077569474]
     'A':
         'RS':
+            '20190814': [0,1954577]
             '20190815': [0,2297654]
             '20190816': [0,2460527]
-        #'OG':
-        #   '20180903': TODO
+        'OG':
+            '20180903': [0,1404244]
 
 #### cell classification variables
-phase_peak_borders: [-1.2,1]
-width_intervals: [[0,7],[8,12],[13,90]]
+width_intervals: [[0,7],[8,12],[13,90]]  # in 30 kHz sampling rates units, division between narrow, medium and sharp
+first_peak_height: 1.2  # the height of the first zsc peak to divide sharp and shallo cells in narrow and medium
+select_th: 0.05
 
-final_classes: ['DOWN_narrow_peak','DOWN_narrow_other','DOWN_medium','DOWN_wide','UP_peak','UP_other']
+final_classes: ['DOWN_narrow_shallow','DOWN_medium_shallow','DOWN_wide','DOWN_narrow_sharp','DOWN_medium_sharp','UP']
+classes_names: ['Narrow Shallow','Medium Shallow','Wide','Narrow Sharp','Medium Sharp','Positive']
 
 
 

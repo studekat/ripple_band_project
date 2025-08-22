@@ -12,13 +12,22 @@ colors_areas:
         'IT': 'sandybrown'
 
 colors_class:
-         'DOWN_narrow_peak': 'red'
-         'DOWN_narrow_other': 'maroon'
-         'DOWN_medium': 'tab:orange'
+         'DOWN_narrow_shallow': 'maroon'
+         'DOWN_narrow_sharp': 'red'
+         'DOWN_medium_shallow': 'darkorange'
+         'DOWN_medium_sharp': 'gold'
          'DOWN_wide': 'tab:blue'
-         'UP_peak': 'green'
-         'UP_other': 'darkgreen'
+         'UP': 'green'
 
+colors_width:
+        'narrow': 'tab:red'
+        'medium': 'orange'
+        'wide': 'tab:blue'
+
+colors_ripple_classes:
+        'LOW': 'darkblue'
+        'ZERO': 'purple'
+        'HIGH': 'maroon'
 
 layout: #### with respect to the rows of the spike train
     'L': [[39,38,37,36,35,34,33,32],
